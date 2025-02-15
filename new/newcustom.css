@@ -92,7 +92,7 @@
 }
 
 .faq-item p,
-.step-description .cardp {
+.step-description .card p {
   color: var(--custom-text);
   font-size: 0.9rem;
 }
