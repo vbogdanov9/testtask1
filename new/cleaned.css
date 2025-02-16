@@ -1,0 +1,133 @@
+:root {
+  --custom-primary: #5f7adb;
+  --custom-secondary: #a2b2ee;
+  --custom-accent: #7b8cdd;
+  --custom-text: #26292b;
+  --custom-light-bg: #ffffff;
+  --custom-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --custom-transition: all 0.3s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+.browser-tab:focus {
+  outline: 2px solid var(--custom-primary);
+  outline-offset: 2px;
+}
+.browser-tab {
+  background: var(--custom-light-bg);
+  color: var(--custom-text);
+  transition: var(--custom-transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.browser-tab:hover {
+  background: var(--custom-secondary);
+  color: var(--custom-text);
+  transform: translateY(-1px);
+}
+.browser-tab.active {
+  background: var(--custom-primary);
+  color: #fff;
+  box-shadow: var(--custom-shadow);
+}
+.browser-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 3px;
+  background: var(--custom-accent);
+  border-radius: 3px 3px 0 0;
+}
+.step-title {
+  color: var(--custom-primary);
+  border-bottom: 2px solid var(--custom-primary);
+}
+.card-title {
+  color: var(--custom-primary);
+}
+.icon-list li i {
+  color: var(--custom-primary);
+  width: 25px;
+}
+.faq-item {
+  height: 180px;
+}
+.step-description .card {
+  height: 240px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  transition: var(--custom-transition);
+}
+.faq-item h3 {
+  color: var(--custom-primary);
+}
+.faq-item p,
+.step-description .card p {
+  color: var(--custom-text);
+  font-size: 0.9rem;
+}
+.tab-content
+  .tab-pane
+  .step-description
+  .icon-list
+  .mb-2
+  .d-md-none.d-lg-none.d-xl-none
+  p {
+  font-size: 1rem;
+}
+.container[role="tablist"] .row .col-md-6 button.browser-tab {
+  font-size: 0.9rem;
+}
+.w-85 {
+  width: 85%;
+}
+@media (max-width: 768px) {
+  #four.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tab-content
+    .tab-pane
+    .step-description
+    .icon-list
+    .mb-2
+    .d-md-none.d-lg-none.d-xl-none
+    p {
+    font-size: 0.9rem;
+  }
+  .container[role="tablist"] .row .col-md-6 button.browser-tab {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 380px) {
+  .faq-item {
+    height: 200px;
+  }
+  .step-description .card {
+    height: 280px;
+  }
+}
+@media (max-width: 340px) {
+  .faq-item {
+    height: 230px;
+  }
+  .step-description .card {
+    height: 320px;
+  }
+}
