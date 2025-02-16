@@ -63,16 +63,15 @@
   color: var(--custom-primary);
   width: 25px;
 }
-.faq-item {
-  height: 180px;
-}
-.step-description .card {
-  height: 240px;
+
+
+.card {
+  transition: var(--custom-transition);
 }
 .card:hover {
   transform: translateY(-5px);
-  transition: var(--custom-transition);
 }
+
 .faq-item h3 {
   color: var(--custom-primary);
 }
@@ -113,21 +112,5 @@
   }
   .container[role="tablist"] .row .col-md-6 button.browser-tab {
     font-size: 0.8rem;
-  }
-}
-@media (max-width: 380px) {
-  .faq-item {
-    height: 200px;
-  }
-  .step-description .card {
-    height: 280px;
-  }
-}
-@media (max-width: 340px) {
-  .faq-item {
-    height: 230px;
-  }
-  .step-description .card {
-    height: 320px;
   }
 }
